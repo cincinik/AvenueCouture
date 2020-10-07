@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigFatCat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href = shop.css>
+    <script src="https://kit.fontawesome.com/15fedb29a2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">AvenueCouture</a>
+            <div class="ml-auto">
+                <a id="cart-btn" class="btn"  href="cart.html"><i class="fas fa-cart-arrow-down"></i> Cos de cumparaturi <span id="cart_badge" class="badge badge-dark hidden"></span></a>
+            </div>
+        </nav>
+    </div>
+    
+    <!-- Section - Products list -->   
+    <div id = "list_of_products">
+        <!-- Admin header -->
+        <div id = "cart-products" class="container mt-5">
+             <h2 id ="h2_cart" class = "">Cos de cumparaturi </h2>
+        </div>
+    
+        <div class = "container">
+            <!-- Products table -->
+            <div id = "cart_products_table" class=" row mt-5">
+                 <div class="col-8">
+                    <table id = "products_table"  class="table table-striped">
+                        <thead id = "products_thead">
+                        <tr id = "table_head">
+                            <th id="c_table_th_Img" scope="col ">Imagine</th>
+                            <th id="c_table_th_Name" scope="col ">Nume</th>
+                            <th id="c_table_th_Price" scope="col ">Pret</th>
+                            <th id="c_table_th_Qty" scope="col ">Cantitate</th>
+                            <th id="c_table_th_Subtotal" scope="col">Subtotal</th>
+                            <th id="c_table_th_Btn" scope="col"></th>
+                        </tr>
+                        </thead>
+                        <tbody id = "cart_tbody"></tbody>
+                    </table>  
+                </div>
+                <!-- Total list -->
+                <div class="col-4">
+                    <ul class="ml-1 mt-5 list-unstyled">
+                        <li id= "prod_no" class="">Nr produse:</li>
+                        <li id= "vat" class="">TVA 19% inclus</li>
+                        <li id= "transport" class="">Transport: 0 RON</li>
+                        <li id= "total" class="">TOTAL:</li>
+                        <li><button id = "buy_now_btn" class="btn btn-primary btn-lg btn-block" disabled>CUMPARA ACUM</button></li>
+                    </ul>   
+                 </div>  
+            </div> 
+        </div>
+    </div>
+
+    <!-- Section - Confirmed order -->  
+    <div id="order_confirmation" class = "container text-center hidden mt-5">
+        <h3 id="confirmation" class = "text-center">Comanda inregistrata! Vei primi un email de confirmare!</h3>
+    </div>
+
+    <!-- Footer -->
+    <footer class="foo container">
+        <div class = "d-none d-sm-block">
+            <h4 class = "text-uppercase font-weight-light text-center">Follow us</h4>
+        </div>
+        <ul id="services">
+            <li>
+                <div class="facebook">
+                    <a href="https://facebook.com">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="twitter">
+                    <a href="https://twitter.com">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="youtube">
+                    <a href="https://www.youtube.com">
+                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="linkedin">
+                    <a href="https://www.linkedin.com">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="instagram">
+                    <a href="https://www.instagram.com">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="utility.js"></script>
+    <script src="models.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

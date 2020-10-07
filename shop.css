@@ -1,0 +1,183 @@
+.invisible{
+    visibility: hidden;
+}
+
+.hidden{
+    display: none;
+}
+
+#cart-btn, #admin-add-btn, button.form_btn, a[id$="_det_btn"] {
+    background-color: rgb(214, 170, 208);
+    border-color: rgb(214, 170, 208); ;
+    color:black;
+}
+
+#admin-btn{
+    background-color: rgb(255, 255, 255);
+}
+h2[id^="h2_admin"]{
+    display: inline-block;
+}
+
+#admin-add-btn, #add_form_butons, #upd_form_butons{
+    float: right;
+}
+
+input[id^="add_form"], #add_form_details{
+    float: right;
+}
+
+#p_table_th_Name{
+    width: 50%;
+    overflow: hidden;
+}
+
+#c_table_th_Name{
+    width: 50%;
+    overflow: hidden;
+}
+
+img[id$="theimg"]{
+    display:block; 
+    width:20%; 
+    height:auto;
+}
+
+img[id$="theimgc"]{
+    display:block; 
+    width:80%; 
+    height:auto;
+}
+
+/* Index products */
+
+#products, div[id^="product_row_"]{
+    margin: 0 auto;
+}
+
+
+/* Footer */
+
+.foo{
+    padding: 2%;
+}
+
+footer #services {
+    text-align: center;
+    transform: translatez(0);
+    height: 10%;
+}
+
+#services{
+    width:40%;
+    padding: 1%;
+    margin: 0 auto;
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+}
+
+#services li {
+    list-style: none;
+}
+
+#services li div {
+    font-size: 120%;
+    padding: 1%;
+    text-align: center;
+    background-color: rgb(255, 253, 253);
+}
+
+#services li a {
+    color: #000000;
+}
+
+
+@media (min-width: 576px) { 
+    #services li div {
+        font-size: 220%;
+    }
+}
+
+@media (min-width: 768px) { 
+    .foo{
+        background-color: rgba(255, 2, 2, 0);
+    }
+
+    #services li div {
+        width: 60px;
+        height: 60px;
+        font-size: 2em;
+        text-align: center;
+        background-color: #fff;
+        transition: all 0.5s ease;
+    }
+
+    #services li div:hover {
+        transform: rotate(360deg);
+        border-radius: 100px;
+    }
+}
+
+
+#add_to_cart_btn, #buy_now_btn{
+    background-color: black;
+    border-color: black ;
+    color:white;
+}
+
+#added_to_cart_toast {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    top: 1%;
+    z-index: 1;
+    font-size: 1.2em;
+  }
+
+.show{
+    @-webkit-keyframes fadein {
+        from {top: 0; opacity: 0;} 
+        to {top: 30px; opacity: 0.5;}
+    }
+      
+    @keyframes fadein {
+        from {top: 0; opacity: 0;}
+        to {top: 30px; opacity: 0.5;}
+    }
+      
+    @-webkit-keyframes fadeout {
+        from {top: 30px; opacity: 0.5;} 
+        to {top: 0; opacity: 0;}
+    }
+      
+    @keyframes fadeout {
+        from {top: 30px; opacity: 0.5;}
+        to {top: 0; opacity: 0;}
+    }
+}
+  
+#added_to_cart_toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#order_confirmation{
+    background-color: black;
+    color: white;
+    padding: 5%;
+
+}
+
+  
+#loader{
+    /* position: fixed; */
+	width: 100vw;
+	height: 15vh;
+    background: #ffffff url("https://designdigga.com/proiect/poze/preloaderCat3.gif") no-repeat center;
+    /* background-size: 40%; */
+	z-index: 1;
+}
